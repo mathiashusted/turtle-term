@@ -1,6 +1,7 @@
 --Turtle Term (System)
 --Lizenz: The BSD 3-Clause License
  
+shell.run("clear")
 print("Turtle Term (Beta)")
 print("Licensed under The BSD 3-Clause License")
 
