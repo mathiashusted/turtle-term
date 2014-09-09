@@ -18,6 +18,8 @@ while true do
   elseif input == "s" or input == "S" then turtle.turnRight()
   elseif input == "d" or input == "D" then turtle.right()
   elseif input == "refuel" or input  == "load" then shell.run("refuel")
+  elseif input == "reboot" or input == "restart" then shell.run("reboot")
+  elseif input == "shutdown" or input == "halt" then shell.run("shutdown")
   else print("Ungültiger Befehl")
   end
 end
