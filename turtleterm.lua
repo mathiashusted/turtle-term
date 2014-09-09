@@ -13,8 +13,8 @@ while true do
   if input == "exit" then break
   elseif input == "help" then --Muss noch gemacht werden
   elseif input == "w" or input == "W" then turtle.forward()
-  elseif input == "a" or input == "A" then turtle.left()
-  elseif input == "s" or input == "S" then turtle.back()
+  elseif input == "a" or input == "A" then turtle.turnLeft()
+  elseif input == "s" or input == "S" then turtle.turnRight()
   elseif input == "d" or input == "D" then turtle.right()
   end
 end
