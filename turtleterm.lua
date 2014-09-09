@@ -16,4 +16,5 @@ while true do
   elseif input == "a" or input == "A" then turtle.left()
   elseif input == "s" or input == "S" then turtle.back()
   elseif input == "d" or input == "D" then turtle.right()
+  end
 end
