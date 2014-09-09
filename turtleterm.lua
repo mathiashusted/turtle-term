@@ -3,8 +3,17 @@
  
 print("Turtle Term (Beta)")
 print("Licensed under The BSD 3-Clause License")
- 
+
+--while true Loop
 while true do
   io.write("> ")
-  --Actions
+  --Get Input
+  input = io.read()
+  --Actions von Input
+  if input == "exit" then break
+  elseif input == "help" then --Muss noch gemacht werden
+  elseif input == "w" or input == "W" then turtle.forward()
+  elseif input == "a" or input == "A" then turtle.left()
+  elseif input == "s" or input == "S" then turtle.back()
+  elseif input == "d" or input == "D" then turtle.right()
 end
