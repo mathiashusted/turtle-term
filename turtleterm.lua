@@ -1,12 +1,6 @@
 --Turtle Term (System)
 --Lizenz: The BSD 3-Clause License
-
-function help(seite)
- if seite == 1 then
-  print("help: Hilfe\nexit: Programm beenden\nclear: Cleart den Bildschirm\nw: Turtle - Nach vorne gehen\n") --Muss noch gemacht werden
- end
-end
-
+ 
 shell.run("clear")
 print("Turtle Term (Beta)")
 print("Licensed under The BSD 3-Clause License")
@@ -19,8 +13,27 @@ while true do
   --Actions von Input
   if input == "exit" then break
   elseif input == "help" then
-   seite = io.write("Welche Seite? ")
-   help(seite)
+   print("exit: Exit the Program")
+   print("w: Forward")
+   print("s: Backward")
+   print("a: TurnLeft")
+   print("d: TurnRight")
+  elseif input == "help2" then
+   print("dig: Dig")
+   print("dig w: DigUp")
+   print("dig s: DigDown")
+   print("place: Place")
+   print("place w: PlaceUp")
+   print("place s: PlaceDown")
+  elseif input == "help3" then
+   print("fuel: FuelLevel")
+   print("refuel or")
+   print("load: ReFuel")
+   print("refual all: ReFuel All")
+   print("reboot or")
+   print("restart: Restart")
+   print("shutdown of")
+   print("halt: ShutDown")
   elseif input == "clear" then shell.run("clear")
   elseif input == "w" or input == "W" then turtle.forward()
   elseif input == "a" or input == "A" then turtle.turnLeft()
