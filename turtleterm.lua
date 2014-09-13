@@ -27,6 +27,7 @@ function tunnel()
     turtle.turnLeft()
     turtle.placeUp()
     turtle.turnRight()
+    turtle.dig()
     turtle.forward()
    end
    if turtle.detect() then turtle.dig() end
