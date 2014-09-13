@@ -23,7 +23,6 @@ function tunnel()
    if turtle.detect() then turtle.dig() end
   end
   print("Fertig!")
-  break
  end
 end
 
