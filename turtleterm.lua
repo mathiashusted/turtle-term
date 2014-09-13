@@ -26,7 +26,6 @@ function tunnel()
     turtle.forward()
    else
     print("Fehler: Kann nicht abbauen.")
-    next
    end
   end
   print("Fertig!")
