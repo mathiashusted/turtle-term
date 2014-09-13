@@ -56,7 +56,7 @@ while true do
   input = io.read()
   --Actions von Input
   if input == "exit" then break
-  elseif input == "help" then help() end
+  elseif input == "help" then help()
   elseif input == "clear" then shell.run("clear")
   elseif input == "w" or input == "W" then turtle.forward()
   elseif input == "a" or input == "A" then turtle.turnLeft()
