@@ -1,9 +1,29 @@
 --Turtle Term (System)
 --Lizenz: The BSD 3-Clause License
 
+terminalZeichen = "# "
+
 function help(seite)
  if seite == 1 then
-  print("help: Hilfe\nexit: Programm beenden\nclear: Cleart den Bildschirm\nw: Turtle - Nach vorne gehen\n") --Muss noch gemacht werden
+  print("help: Hilfe\nexit: Programm beenden\nclear: Cleart den Bildschirm\nw: Turtle - Nach vorne gehen") --Muss noch gemacht werden
+ end
+end
+
+function tunnel()
+ io.write("Wie viele Blöcke? "..terminalZeichen)
+ blocks = io.read()
+ if blocks > 0 then
+  for block = 0, blocks do
+   if turtle.detectDown() ~= true then turtle.placeDown() end
+   if turtle.detectUp() == true then turtle.digUp() end
+   if turtle.getFuelLevel == 0 then
+    print("Ich brauche Fuel!")
+    break
+   end
+   if turtle.detect() then turtle.dig() end
+  end
+  print("Fertig!")
+  break
  end
 end
 
@@ -13,7 +33,7 @@ print("Licensed under The BSD 3-Clause License")
 
 --while true Loop
 while true do
-  io.write("- ")
+  io.write(terminalZeichen)
   --Get Input
   input = io.read()
   --Actions von Input
@@ -31,6 +51,7 @@ while true do
   elseif input == "dig" or input == "dig" then turtle.dig()
   elseif input == "dig w" or input == "dig W" then turtle.digUp()
   elseif input == "dig s" or input == "dig S" then turtle.digDown()
+  elseif input == "tunnel" or input == "gang" then tunnel()
   elseif input == "place" then turtle.place()
   elseif input == "place s" or input == "place S" then turtle.placeDown()
   elseif input == "place w" or input == "place W" then turtle.placeUp()
