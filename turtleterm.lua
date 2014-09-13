@@ -8,11 +8,8 @@ function help()
 end
 
 function tunnel()
- hasItems = {}
- hasItems[16] = turtle.getItemsCount(16) > 0
- hasItems[15] = turtle.getItemsCount(15) > 0
- if hasItems[16] == false then print("-- Lege bitte Fackeln in Slot 16! --") end
- if hasItems[15] == false then print("-- Lege bitte Stein in Slot 15! --") end
+ if turtle.getItemCount(16) == 0 then print("-- Lege bitte Fackeln in Slot 16! --") end
+ if turtle.getItemCount(15) == 0 then print("-- Lege bitte Stein in Slot 15! --") end
  io.write("Wie viele Blöcke? "..terminalZeichen)
  blocks = io.read()
  blocks = blocks + 0
@@ -31,7 +28,9 @@ function tunnel()
    end
    if block % 10 == 0 then
     turtle.turnLeft()
-    turtle.placeUp()
+    turtle.turnLeft()
+    turtle.place()
+    turtle.turnRight()
     turtle.turnRight()
     turtle.dig()
     turtle.forward()
@@ -73,7 +72,7 @@ while true do
   elseif input == "place s" or input == "place S" then turtle.placeDown()
   elseif input == "place w" or input == "place W" then turtle.placeUp()
   elseif input == "refuel" or input  == "load" then turtle.refuel()
-  elseif input == "refuel all" or input == "refuel ALL" then turtle.refuelAll()
+  elseif input == "refuel all" or input == "refuel ALL" then shell.run("refuel all")
   elseif input == "fuel" then print(turtle.getFuelLevel())
   elseif input == "reboot" or input == "restart" then shell.run("reboot")
   elseif input == "shutdown" or input == "halt" then shell.run("shutdown")
