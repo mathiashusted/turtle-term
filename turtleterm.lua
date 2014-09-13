@@ -12,6 +12,7 @@ end
 function tunnel()
  io.write("Wie viele Blöcke? "..terminalZeichen)
  blocks = io.read()
+ blocks = blocks + 0
  if blocks > 0 then
   for block = 0, blocks do
    if turtle.detectDown() ~= true then turtle.placeDown() end
