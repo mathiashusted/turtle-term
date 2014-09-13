@@ -10,16 +10,24 @@ function help(seite)
 end
 
 function tunnel()
- if turtle.getItemCount(16) == 0 then print("-- Lege bitte Torches in Slot 16! --") end
+ hasItems = {}
+ hasItems[16] = turtle.getItemsCount(16) > 0
+ hasItems[15] = turtle.getItemsCount(15) > 0
+ if hasItems[16] == false then print("-- Lege bitte Fackeln in Slot 16! --") end
+ if hasItems[15] == false then print("-- Lege bitte Stein in Slot 15! --") end
  io.write("Wie viele Blöcke? "..terminalZeichen)
  blocks = io.read()
  blocks = blocks + 0
  if blocks > 0 then
   turtle.select(16)
   for block = 0, blocks do
-   if turtle.detectDown() ~= true then turtle.placeDown() end
+   if turtle.detectDown() ~= true then
+    turtle.select(15)
+    turtle.placeDown()
+    turtle.select(16)
+   end
    if turtle.detectUp() == true then turtle.digUp() end
-   if turtle.getFuelLevel == 0 then
+   if turtle.getFuelLevel() == 0 then
     print("Ich brauche Fuel!")
     break
    end
