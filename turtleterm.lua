@@ -24,7 +24,9 @@ function tunnel()
     break
    end
    if block % 10 == 0 then
-    turtle.placeLeft()
+    turtle.turnLeft()
+    turtle.placeUp()
+    turtle.turnRight()
    end
    if turtle.detect() then turtle.dig() end
    if turtle.detect() == false and turtle.detectUp() == false then
