@@ -22,6 +22,12 @@ function tunnel()
     break
    end
    if turtle.detect() then turtle.dig() end
+   if turtle.detect() == false and turtle.detectUp() == false then
+    turtle.forward()
+   else
+    print("Fehler: Kann nicht abbauen.")
+    next
+   end
   end
   print("Fertig!")
  end
