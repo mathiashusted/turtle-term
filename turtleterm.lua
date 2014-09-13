@@ -10,10 +10,12 @@ function help(seite)
 end
 
 function tunnel()
+ if turtle.getItemCount(16) == 0 then print("-- Lege bitte Torches in Slot 16! --") end
  io.write("Wie viele Blöcke? "..terminalZeichen)
  blocks = io.read()
  blocks = blocks + 0
  if blocks > 0 then
+  turtle.select(16)
   for block = 0, blocks do
    if turtle.detectDown() ~= true then turtle.placeDown() end
    if turtle.detectUp() == true then turtle.digUp() end
@@ -21,13 +23,17 @@ function tunnel()
     print("Ich brauche Fuel!")
     break
    end
+   if block % 10 == 0 then
+    turtle.placeUp()
+   end
    if turtle.detect() then turtle.dig() end
    if turtle.detect() == false and turtle.detectUp() == false then
     turtle.forward()
    else
     print("Fehler: Kann nicht abbauen.")
    end
-  end
+ end
+ if turtle.detectUp() == true then turtle.digUp() end
   print("Fertig!")
  end
 end
