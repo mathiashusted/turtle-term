@@ -26,6 +26,8 @@ while true do
   elseif input == "a" or input == "A" then turtle.turnLeft()
   elseif input == "s" or input == "S" then turtle.back()
   elseif input == "d" or input == "D" then turtle.turnRight()
+  elseif input == "up" then turtle.up()
+  elseif input == "down" then turtle.down()
   elseif input == "dig" or input == "dig" then turtle.dig()
   elseif input == "dig w" or input == "dig W" then turtle.digUp()
   elseif input == "dig s" or input == "dig S" then turtle.digDown()
