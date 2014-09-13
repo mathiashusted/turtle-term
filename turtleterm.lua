@@ -24,13 +24,11 @@ function tunnel()
     break
    end
    if block % 10 == 0 then
-    turtle.placeUp()
+    turtle.placeLeft()
    end
    if turtle.detect() then turtle.dig() end
    if turtle.detect() == false and turtle.detectUp() == false then
     turtle.forward()
-   else
-    print("Fehler: Kann nicht abbauen.")
    end
  end
  if turtle.detectUp() == true then turtle.digUp() end
