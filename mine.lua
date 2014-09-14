@@ -21,9 +21,9 @@ elseif arg[1] == "set" then
   --
 else
   arg[1] = arg[1] - 1
-  if turtle.getItemCount(stoneSlot) == 0 then print("Ich brauche Fackeln!")
-  elseif turtle.getItemCount(15) == 0 then print("Ich brauche Stein!")
-  elseif turtle.getFuelLevel == 0 then print("Ich brauche Fuel!")
+  if turtle.getItemCount(stoneSlot) == 0 then print([[Ich brauche Fackeln!]])
+  elseif turtle.getItemCount(15) == 0 then print([[Ich brauche Stein!]])
+  elseif turtle.getFuelLevel == 0 then print([[Ich brauche Fuel!]])
   end
   turtle.select(16)
   for block,arg[1],1 do
@@ -38,11 +38,11 @@ else
     if turtle.getFuelLevel() == 0 then
       if autoRefuel == true then shell.run("refuel all")
       else
-        print("Ich brauche Fuel!")
+        print([[Ich brauche Fuel!]])
         break
       end
     end
     turtle.forward()
   end
-  print("Fertig!")
+  print([[Fertig!]])
 end
