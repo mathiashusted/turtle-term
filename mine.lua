@@ -8,13 +8,17 @@ if arg[1] == nil then
 else
   arg[1] = arg[1] - 1
   if turtle.getItemCount(stoneSlot) == 0 then print([[Ich brauche Fackeln in Slot 16!]])
-    repeat until turtle.getItemCount(stoneSlot) > 0 end
+    repeat until turtle.getItemCount(stoneSlot) > 0
   end
   if turtle.getItemCount(torchSlot) == 0 then print([[Ich brauche Stein in Slot 15!]])
-    repeat until turtle.getItemCount(torchSlot) > 0 end
+    repeat until turtle.getItemCount(torchSlot) > 0
   end
-  if turtle.getFuelLevel == 0 then print([[Ich brauche Fuel!]])
-    break
+  if turtle.getFuelLevel() == 0 then print([[Ich brauche Fuel!]])
+    repeat
+      io.write([[Drücke ENTER um ein Refuel zu machen]])
+      fuelInput = io.read()
+      shell.run("refuel all")
+    until turtle.getFuelLevel() > 0
   end
   turtle.select(16)
   for block=0,arg[1],1 do
