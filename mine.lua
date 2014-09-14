@@ -18,7 +18,7 @@ else
       io.write([[Drücke ENTER um ein Refuel zu machen. Schreibe all um ein Refuel all zu machen.]])
       fuelInput = io.read()
       if fuelInput == "all" then shell.run("refuel all")
-      else turtle.refuel()
+      else turtle.refuel() end
     until turtle.getFuelLevel() > 0
   end
   turtle.select(16)
