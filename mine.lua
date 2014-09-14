@@ -15,9 +15,10 @@ else
   end
   if turtle.getFuelLevel() == 0 then print([[Ich brauche Fuel!]])
     repeat
-      io.write([[Drücke ENTER um ein Refuel zu machen]])
+      io.write([[Drücke ENTER um ein Refuel zu machen. Schreibe all um ein Refuel all zu machen.]])
       fuelInput = io.read()
-      shell.run("refuel all")
+      if fuelInput == "all" then shell.run("refuel all")
+      else turtle.refuel()
     until turtle.getFuelLevel() > 0
   end
   turtle.select(16)
