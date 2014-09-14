@@ -3,7 +3,7 @@ print([[Turtleterm 0.8 "Beta"]])
 local terminalZeichen = "# "
 
 while true do
-  io.write("terminalZeichen")
+  io.write(terminalZeichen)
   input = io.read()
   if input == "exit" then break
   else
