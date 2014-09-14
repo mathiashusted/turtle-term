@@ -8,5 +8,5 @@ if arg[1] > -1 then
     turtle.forward()
   end
 else
-  print([[Usage: w [Blocks]])
+  print([[Usage: w [Blocks\]])
 end
