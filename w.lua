@@ -9,5 +9,5 @@ if arg[1] > 0 then
     turtle.forward()
   end
 else
-  print([[Usage: w [Blocks]]])
+  print([[Usage: w [Blocks]])
 end
