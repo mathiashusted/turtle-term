@@ -14,8 +14,6 @@ download("w","Cmu9r1du")
 download("a","nhR6UFEY")
 download("s","8h4HFYaJ")
 download("d","0j06jMHP")
-  
-end
 
 --Functions
 download("dig","qKz7KjSJ")
