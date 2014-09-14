@@ -12,7 +12,7 @@ function tunnel()
  if turtle.getItemCount(15) == 0 then print("-- Lege bitte Stein in Slot 15! --") end
  io.write("Wie viele Blöcke? "..terminalZeichen)
  blocks = io.read()
- blocks = blocks + 0
+ blocks = blocks - 1
  if blocks > 0 then
   turtle.select(16)
   for block = 0, blocks do
