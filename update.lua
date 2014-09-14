@@ -9,7 +9,7 @@ function download(filename,pastebin)
   end
 end
 
-print("Updating Turtleterm...")
+print([[Updating Turtleterm...]])
 --Keys
 download("w","Cmu9r1du")
 download("a","nhR6UFEY")
