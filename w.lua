@@ -1,5 +1,5 @@
 local arg = {...}
-if arg[1] then arg[1] = arg[1] + 1 end
+if arg[1] then arg[1] = arg[1] + 0 end
 
 if arg[1] == nil then arg[1] = 1 end
 
