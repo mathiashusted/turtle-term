@@ -7,9 +7,14 @@ if arg[1] == nil then
   --
 else
   arg[1] = arg[1] - 1
-  if turtle.getItemCount(stoneSlot) == 0 then print([[Ich brauche Fackeln in Slot 16!]]) sleep(3)
-  elseif turtle.getItemCount(15) == 0 then print([[Ich brauche Stein in Slot 15!]]) sleep(3)
-  elseif turtle.getFuelLevel == 0 then print([[Ich brauche Fuel!]])
+  if turtle.getItemCount(stoneSlot) == 0 then print([[Ich brauche Fackeln in Slot 16!]])
+    repeat until turtle.getItemCount(stoneSlot) > 0
+  end
+  if turtle.getItemCount(torchSlot) == 0 then print([[Ich brauche Stein in Slot 15!]])
+    repeat until turtle.getItemCount(torchSlot) > 0
+  end
+  if turtle.getFuelLevel == 0 then print([[Ich brauche Fuel!]])
+    break
   end
   turtle.select(16)
   for block=0,arg[1],1 do
