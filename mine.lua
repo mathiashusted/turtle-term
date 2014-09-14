@@ -5,20 +5,6 @@ autoRefuel = true
 if arg[1] == nil then
   print([[Usage: mine <Länge>]])
   --
-elseif arg[1] == "set" then
-  if arg[2] then
-    if arg[2] == "stoneSlot" then
-      if arg[3] then
-        arg[3] = arg[3] + 0
-        stoneSlot = arg[3]
-      else
-        print([[Usage: mine set <Variable> <Value>]])
-      end
-    end
-  else
-    print([[Usage: mine set <Variable> <Value>]])
-  end
-  --
 else
   arg[1] = arg[1] - 1
   if turtle.getItemCount(stoneSlot) == 0 then print([[Ich brauche Fackeln!]])
@@ -26,7 +12,7 @@ else
   elseif turtle.getFuelLevel == 0 then print([[Ich brauche Fuel!]])
   end
   turtle.select(16)
-  for block,arg[1],1 do
+  for block=0,arg[1],1 do
     turtle.suck()
     if turtle.detectUp() == true then turtle.digUp() end
     if turtle.detectDown() == false then
