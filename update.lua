@@ -20,3 +20,8 @@ download("d","0j06jMHP")
 download("dig","qKz7KjSJ")
 download("mine","jN3zEHkf")
 download("startup","nKV2QkEQ")
+
+--Done
+print([[Finished updating, restarting...]])
+sleep(3)
+os.reboot()
