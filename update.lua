@@ -21,6 +21,9 @@ download("dig","qKz7KjSJ")
 download("mine","jN3zEHkf")
 download("startup","nKV2QkEQ")
 
+--Update Programm
+download("update","Sa2dV347")
+
 --Done
 print([[Finished updating, restarting...]])
 sleep(3)
