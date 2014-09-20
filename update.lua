@@ -16,7 +16,7 @@ download("a","nhR6UFEY")
 download("s","8h4HFYaJ")
 download("d","0j06jMHP")
 download("up","1WRgSXiM")
-download("down","qKz7KjSJ")
+download("down","N7aWfTSZ")
 
 --Functions
 download("dig","qKz7KjSJ")
