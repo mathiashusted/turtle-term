@@ -10,11 +10,13 @@ function download(filename,pastebin)
 end
 
 print([[Updating Turtleterm...]])
---Keys
+--Bewegung
 download("w","Cmu9r1du")
 download("a","nhR6UFEY")
 download("s","8h4HFYaJ")
 download("d","0j06jMHP")
+download("up","1WRgSXiM")
+download("down","qKz7KjSJ")
 
 --Functions
 download("dig","qKz7KjSJ")
@@ -22,7 +24,7 @@ download("mine","jN3zEHkf")
 download("startup","nKV2QkEQ")
 download("place","BCnnZKmV")
 
---Update Programm
+--Update Updater
 download("update","Sa2dV347")
 
 --Done
