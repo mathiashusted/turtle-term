@@ -11,21 +11,21 @@ end
 
 print([[Updating Turtleterm...]])
 --Bewegung
-download("w","Cmu9r1du")
-download("a","nhR6UFEY")
-download("s","8h4HFYaJ")
-download("d","0j06jMHP")
-download("up","1WRgSXiM")
-download("down","N7aWfTSZ")
+download("w","7xddzDwc")
+download("a","Xt0fhDEW")
+download("s","BeXfrKPN")
+download("d","5LTZYJUc")
+download("up","GrYq86xD")
+download("down","x34vmpmi")
 
 --Functions
-download("dig","qKz7KjSJ")
-download("mine","jN3zEHkf")
-download("startup","nKV2QkEQ")
-download("place","BCnnZKmV")
+download("dig","w0JNita2")
+download("mine","M06D4Cac")
+download("startup","9D9Sjfyb")
+download("place","xL8fCXrU")
 
 --Update Updater
-download("update","Sa2dV347")
+download("update","aSH8k35U")
 
 --Done
 print([[Finished updating, restarting...]])
